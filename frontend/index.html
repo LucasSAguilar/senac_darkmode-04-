@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Filme</title>
+  </head>
+
+  <link rel="stylesheet" href="styles.css" />
+  <body>
+    <button id="themeToggleButton">Trocar tema</button>
+    <div id="container">
+      <div id="ladoEsquerdo">
+        <h1 id="tituloPagina">Cadastrar Filme</h1>
+        <form id="filmeForm">
+          <input type="hidden" id="filmeId" name="filmeId" value="" />
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" required /><br />
+          <label for="sinopse">Sinopse:</label>
+          <textarea id="sinopse" name="sinopse" required></textarea><br />
+          <label for="genero">Gênero:</label>
+          <input type="text" id="genero" name="genero" required /><br />
+          <label for="anoLancamento">Ano de Lançamento:</label>
+          <input
+            type="number"
+            id="anoLancamento"
+            name="anoLancamento"
+            required
+          /><br />
+          <button id="btn-enviar" type="submit">Cadastrar</button>
+        </form>
+
+        <form id="listaFilmes">
+          <h2 id="titulos-filmes-cadastrados">Filmes Cadastrados</h2>
+          <ul id="filmes"></ul>
+        </form>
+      </div>
+
+      <div id="ladoDireito">
+        <h2 id="tituloPagina">Analisar Filme</h2>
+        <form id="formAnalise">
+          <label for="filmeSelect">Escolha um Filme:</label>
+          <select id="filmeSelect" name="filme"></select>
+          <br />
+          <label for="comentario">Comentário:</label>
+          <textarea id="comentario" name="comentario" required></textarea><br />
+          <label for="genero">Nota:</label>
+          <input type="number" id="nota" name="nota" required /><br />
+          <button type="submit">Enviar Análise</button>
+        </form>
+
+        <div id="analisesFeitas">
+          <h2 id="tituloPagina">Análises Feitas</h2>
+          <ul id="listaAnalises"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+  <script src="darkmode.js"></script>
+</html>
